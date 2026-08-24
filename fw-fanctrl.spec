@@ -25,12 +25,13 @@ Requires:       python3
 Requires:       fw-ectool
 
 Patch0:         138-no-build.patch
+Patch1:         139-skip-inactive-service.patch
 
 %description
 Framework Fan control script
 
 %prep
-%autosetup -n %{name}-%{commit}
+%autosetup -p1 -n %{name}-%{commit}
 
 %build
 %pyproject_wheel
